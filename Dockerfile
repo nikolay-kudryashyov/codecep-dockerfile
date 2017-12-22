@@ -19,8 +19,7 @@ RUN docker-php-ext-install \
     xml \
     pdo \
     pdo_mysql \
-    mbstring \
-    mcrypt
+    mbstring
 
 # Install pecl extensions
 RUN pecl install mongodb && \
