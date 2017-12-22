@@ -16,10 +16,8 @@ RUN apt-get update && \
 RUN docker-php-ext-install \
     bcmath \
     zip \
-    xml \
     pdo \
-    pdo_mysql \
-    mbstring
+    pdo_mysql
 
 # Install pecl extensions
 RUN pecl install mongodb && \
