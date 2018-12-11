@@ -1,6 +1,6 @@
 FROM php:7.2-cli
 
-MAINTAINER Vage Zakaryan vagezakaryan@mail.ru
+LABEL authors="Vage Zakaryan vagezakaryan@mail.ru, Eugeny Guchek eugeny.guchek@llsoft.by"
 
 # Install required system packages
 RUN apt-get update && \
@@ -17,6 +17,7 @@ RUN docker-php-ext-install \
     bcmath \
     zip \
     pdo \
+    gd \
     pdo_mysql
 
 # Install pecl extensions
