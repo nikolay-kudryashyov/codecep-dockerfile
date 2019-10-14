@@ -28,6 +28,9 @@ RUN pecl install mongodb && \
 # Configure php
 RUN echo "date.timezone = UTC" >> /usr/local/etc/php/php.ini
 
+# Install ImageMagick
+RUN apk --update add imagemagick
+
 # Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
